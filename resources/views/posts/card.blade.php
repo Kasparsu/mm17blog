@@ -12,6 +12,6 @@
         @endif
     </div>
     <div class="card-footer text-muted">
-        <b>By: </b>{{$post->author->name}} <b>At:</b> {{$post->created_at}}
+        <b>By: </b>{{$post->author->name}} <b>At:</b> {{$post->human_date}}
     </div>
 </div>

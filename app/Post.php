@@ -16,7 +16,7 @@ class Post extends Model
         return substr($this->body, 0, 280);
     }
     public function getHumanDateAttribute(){
-        return Carbon::create($this->created_at)->diffForHumans();
+        return $this->created_at->diffForHumans();
     }
     public function author(){
         return $this->belongsTo(User::class,'user_id', 'id');
