@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.public')
 @section('title', 'Blog Home Page')
 @section('content')
     <h1>Our cool Blog</h1>

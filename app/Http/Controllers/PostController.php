@@ -3,20 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $posts = Post::latest()->with('author')->paginate();
+    public function index(){
+        $posts = Post::with('author')->paginate();
 
-        return view('posts.index', compact('posts'));
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -26,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -37,7 +43,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->body = $request->input('body');
+        $post->title = $request->input('title');
+        $post->user_id = Auth::user()->id;
+        $post->save();
+        return redirect('/admin/posts');
     }
 
     /**
@@ -48,7 +59,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.view', compact('post'));
+        return view('admin.posts.show', compact('post'));
     }
 
     /**
@@ -59,7 +70,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -71,7 +82,10 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->body = $request->input('body');
+        $post->title = $request->input('title');
+        $post->save();
+        return redirect('/admin/posts');
     }
 
     /**
@@ -82,6 +96,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect('/admin/posts');
     }
 }

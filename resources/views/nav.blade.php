@@ -23,6 +23,7 @@
                             @csrf
                             <input type="submit" class="dropdown-item" value="Logout">
                         </form>
+                        <a class="dropdown-item" href="/home">Admin panel</a>
                     </div>
                 </li>
             @else

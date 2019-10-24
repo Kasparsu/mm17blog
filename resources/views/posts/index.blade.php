@@ -1,5 +1,5 @@
 <?php /** @var Illuminate\Pagination\LengthAwarePaginator $posts */?>
-@extends('layout')
+@extends('layouts.public')
 @section('title', 'Blog Posts')
 @section('content')
     @foreach($posts as $key=>$post)
