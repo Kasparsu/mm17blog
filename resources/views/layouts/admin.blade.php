@@ -18,6 +18,9 @@
                 <a href="/admin/posts" class="list-group-item list-group-item-action">
                     Posts
                 </a>
+                <a href="/admin/users" class="list-group-item list-group-item-action">
+                    Users
+                </a>
             </div>
 
         </div>

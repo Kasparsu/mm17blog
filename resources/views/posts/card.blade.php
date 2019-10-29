@@ -1,6 +1,10 @@
 <?php /** @var App\Post $post */ ?>
 <div class="card mt-3">
-    <img src="https://picsum.photos/id/{{$post->id}}/1068/300/?blur&grayscale" class="card-img-top" alt="...">
+    @if($post->images()->first())
+        <div style="height:300px; overflow:hidden;">
+            <img src="{{$post->images()->first()->path}}" class="card-img-top" alt="{{$post->images()->first()->name}}">
+        </div>
+    @endif
     <div class="card-body">
         <h5 class="card-title">{{$post->title}}</h5>
 

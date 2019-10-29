@@ -22,6 +22,15 @@ Route::get('admin/posts/{post}', 'PostController@show');
 Route::get('admin/posts/edit/{post}', 'PostController@edit');
 Route::post('admin/posts/edit/{post}', 'PostController@update');
 Route::get('admin/posts/delete/{post}', 'PostController@destroy');
+
+Route::get('admin/users', 'UserController@index');
+Route::get('admin/users/new', 'UserController@create');
+Route::post('admin/users/new', 'UserController@store');
+Route::get('admin/users/{user}', 'UserController@show');
+Route::get('admin/users/edit/{user}', 'UserController@edit');
+Route::post('admin/users/edit/{user}', 'UserController@update');
+Route::get('admin/users/delete/{user}', 'UserController@destroy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

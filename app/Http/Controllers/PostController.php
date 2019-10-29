@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use App\Post;
 use Auth;
 use Illuminate\Http\Request;
+use Storage;
 
 class PostController extends Controller
 {
@@ -20,7 +22,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $posts = Post::with('author')->paginate();
+        $posts = Auth::user()->posts()->paginate();
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -48,6 +50,24 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->user_id = Auth::user()->id;
         $post->save();
+        if($request->input('image_url') != '') {
+            $contents = file_get_contents($request->input('image_url'));
+            $fileEnding = explode('.', $request->input('image_url'));
+            $fileEnding = $fileEnding[count($fileEnding)-1];
+            $name = bcrypt(now() . $request->input('image_url')) . '.' . $fileEnding;
+            Storage::disk('public')->put($name, $contents);
+            $image = new Image();
+            $image->path = '/storage/' . $name;
+            $image->post()->associate($post);
+            $image->save();
+        }
+        if($request->file('image')){
+            $path = $request->file('image')->store('public');
+            $image = new Image();
+            $image->path = '/storage/' . explode('/',$path)[1];
+            $image->post()->associate($post);
+            $image->save();
+        }
         return redirect('/admin/posts');
     }
 

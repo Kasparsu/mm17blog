@@ -26,6 +26,14 @@
                 <th scope="row">Modified</th>
                 <td>{{$post->updated_at}}</td>
             </tr>
+            <tr>
+                <th scope="row">Images</th>
+                <td>
+                    @foreach($post->images as $image)
+                        <img src="{{$image->path}}" alt="{{$image->name}}" class="img-thumbnail">
+                    @endforeach
+                </td>
+            </tr>
         </tbody>
     </table>
 @endsection
