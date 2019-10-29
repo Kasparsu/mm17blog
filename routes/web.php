@@ -14,6 +14,7 @@
 Route::get('/', 'PublicController@index');
 Route::get('/posts', 'PublicController@posts');
 Route::get('/posts/{post}', 'PublicController@viewPost');
+Route::post('/posts/{post}/comment', 'CommentController@store');
 
 Route::get('admin/posts', 'PostController@index');
 Route::get('admin/posts/new', 'PostController@create');

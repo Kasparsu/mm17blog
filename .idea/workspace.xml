@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f81f4e-730b-4cdb-aecc-70c28c159a18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ImageFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_16_083159_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_16_083159_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_24_094929_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_24_094929_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_24_095646_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_24_095646_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/card.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -139,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/ms18/laravel-docker-install/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -187,6 +177,7 @@
       <workItem from="1571910418986" duration="4790000" />
       <workItem from="1571980663248" duration="12106000" />
       <workItem from="1572258871772" duration="59000" />
+      <workItem from="1572352181056" duration="4876000" />
     </task>
     <servers />
   </component>
