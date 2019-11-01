@@ -15,7 +15,8 @@ class CommentSeeder extends Seeder
     public function run()
     {
         Post::all()->each(function ($post){
-            factory(Comment::class, 10)->make(['post_id' => $post->id])->each(function ($comment){
+            $rand = rand(0,100);
+            factory(Comment::class, $rand)->make(['post_id' => $post->id])->each(function ($comment){
                 $user = User::inRandomOrder()->first();
                 $comment->user_id = $user->id;
                 $comment->save();

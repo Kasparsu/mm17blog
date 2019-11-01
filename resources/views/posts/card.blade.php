@@ -18,6 +18,7 @@
     <div class="card-footer text-muted">
         <b>By: </b>{{$post->author->name}} <b>At:</b> {{$post->human_date}} <br>
         <b>Comments:</b> {{$post->comments()->count()}}
+        <b>Comments today:</b> {{$post->commentsToday()->count()}}
     </div>
     @if(!isset($posts))
         <div class="card-body">

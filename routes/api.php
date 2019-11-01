@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resources(['posts' => 'ApiPostController']);
+Route::post('login', 'JWTController@authenticate');
+Route::get('me', 'JWTController@me');
+Route::get('logout', 'JWTController@logout');
+//Route::get('posts', 'ApiPostController@index');
+//Route::post('posts', 'ApiPostController@store');
+//Route::get('posts/{post}', 'ApiPostController@show');
+//Route::patch('posts/{post}', 'ApiPostController@update');
+//Route::delete('posts/{post}', 'ApiPostController@destroy');

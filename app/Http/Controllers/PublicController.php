@@ -12,7 +12,10 @@ class PublicController extends Controller
         return view('index', compact('posts'));
     }
     public function posts(){
-        $posts = Post::latest()->with('author')->paginate();
+        $posts = Post::withCount('commentsToday')->
+        orderBy('comments_today_count', 'desc')->
+        with( ['author'])->
+        paginate();
 
         return view('posts.index', compact('posts'));
     }

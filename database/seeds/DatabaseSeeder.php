@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now()
         ]);
         $user->save();
+        factory(User::class)->create(['name' => 'Deleted']);
     }
 }

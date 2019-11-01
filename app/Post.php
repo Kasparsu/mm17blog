@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $appends = ['snippet', 'human_date'];
+    protected $with = ['images', 'author'];
     /** @mixin \Eloquent */
     public function getBodyAttribute($value){
         return str_replace("\n", '<br>', $value);
@@ -27,5 +29,8 @@ class Post extends Model
     }
     public function comments(){
         return $this->hasMany(Comment::class);
+    }
+    public function commentsToday(){
+        return $this->hasMany(Comment::class)->whereDate('created_at', '>', new Carbon('last month'));
     }
 }

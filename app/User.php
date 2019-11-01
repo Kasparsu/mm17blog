@@ -5,8 +5,9 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -41,5 +42,27 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany(Post::class);
     }
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+    public function delete()
+    {
+        $deletedUser = User::where('name', 'Deleted')->first();
+        $this->comments->each(function ($comment) use($deletedUser){
+            $comment->user_id = $deletedUser->id;
+            $comment->body = 'This comment has been deleted!';
+            $comment->save();
+        });
+        return parent::delete();
+    }
 
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 }
