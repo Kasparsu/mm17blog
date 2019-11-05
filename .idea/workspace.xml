@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f81f4e-730b-4cdb-aecc-70c28c159a18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PublicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PublicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CommentSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CommentSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiPostController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/KTA18Agile/laravel-docker-install/laravel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ms18/laravel-docker-install/test" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -195,6 +180,8 @@
       <workItem from="1572352181056" duration="7110000" />
       <workItem from="1572423099476" duration="11121000" />
       <workItem from="1572503980741" duration="13789000" />
+      <workItem from="1572594398665" duration="1212000" />
+      <workItem from="1572863542214" duration="48000" />
     </task>
     <servers />
   </component>
